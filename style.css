@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'SOGANGUNIVERSITYTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html, body {
+  background-color: #000;
+  width: 100%;
+  font-family: 'SOGANGUNIVERSITYTTF';
+  overflow-x: hidden;
+}
+
+
+video {
+  pointer-events: none; /* 사용자 입력 비활성화 하는거 */
+}
+.video-text-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.video-text-container p{
+  margin-left: -160px;
+  margin-top: 130px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18pt;
+  font-weight: 500;
+}
+.video-text-container button p{
+  margin-top: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15pt;
+  font-weight: 400;
+}
+.video-text-container a{
+  margin-left: -86px;
+  margin-top: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10pt;
+  font-weight: 400;
+  color: #616161;
+}
+
+.page2 {
+  width: 100%;
+  height: 490px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://ifh.cc/g/l0wcvr.png);
+  
+}
+
+
+/*상자 두둥실*/
+.obj {
+  position: absolute;
+  width: 900px;
+  height:700px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  transition: 7s all;
+  /* transform: rotateX(-25deg) rotateY(20deg); */
+}
+
+.objchild {
+  /* animation: rotate 10s infinite linear; */
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(25px 20px 7px #000000);
+
+}
+
+.objchild::after {
+  /* content: ""; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  box-shadow: 0 0 200px 15px white;
+  /* transform: rotateX(90deg) scale(1.1) translateZ(-120px); */
+}
+
+.inn6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  /* background: rgb(21, 21, 21); */
+  /* transform: rotateX(90deg) translateZ(100px); */
+  animation: updown 4s infinite ease-in-out;
+}
+
+
+@keyframes rotate {
+  0% {
+      transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+      transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+      top:-10%;
+  }
+
+  50% {
+      top:0%;
+  }
+
+  100% {
+      top:-10%
+  }
+}
+
+/* .cover 클래스 스타일 수정 */
+.cover {
+  width: 100vw;
+  height: 70px;
+  margin-bottom: 5vw;
+  display: flex;
+  align-items: center;
+}
+
+.cover:nth-of-type(1) {
+  margin-top: 20vh;
+  transform: rotate(-6deg);
+  background-color: #f6fe04;
+}
+
+
+.cover:nth-of-type(2) {
+  transform: rotate(2deg);
+  background-color: #f6fe04;
+  justify-content: flex-end;
+}
+
+.cover:nth-of-type(3) {
+  transform: rotate(-7deg);
+  background-color: #f6fe04;
+  margin-bottom: 22vh;
+}
+
+.cover:nth-of-type(4) {
+  transform: rotate(3deg);
+  background-color: #f6fe04;
+  margin-bottom: 8vh;
+}
+.cover:nth-of-type(5) {
+  transform: rotate(-2deg);
+  background-color: #f6fe04;
+  justify-content: flex-end;
+  margin-bottom: 1vh;
+}
+
+p {
+  display: flex;
+  padding: 0px;
+  font-size: clamp(2vw, 2vw, 5rem);
+}
+
+/* 메뉴 스타일 */
+.menuu {
+  padding: 20px 200px;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100;
+}
+
+
+.logo img{
+  width: 300px;
+  height: auto;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #f6fe04;
+}
+
+
+
+
+
+/* 버튼 */
+button {
+  border: none;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  background: #000;
+  position: relative;
+  cursor: pointer;
+  margin-top: 300px;
+  margin-left: -212px;
+}
+
+button p {
+  align-self: center;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 200px;
+  padding-top: -100px;
+}
+
+button::after {
+  position: absolute;
+  margin-left: -7px;
+  margin-top: -2px;
+  content: "";
+  width: 100%;
+  z-index: -1;
+  height: 10%;
+  bottom: 0;
+  clip-path: polygon(
+      0% 74%, 4% 75%, 8% 76%, 11% 77%, 15% 78%, 20% 78%, 25% 77%, 32% 77%, 37% 75%, 40% 74%, 43% 74%, 46% 73%, 52% 72%, 57% 72%, 65% 74%, 66% 75%, 71% 78%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%
+  );
+  background: #f6fe04;
+  transition: 0.2s ease;
+}
+
+button::before {
+  position: absolute;
+  margin-left: -6px;
+  margin-top: -1px;
+  content: "";
+  transform: rotate(180deg);
+  width: 100%;
+  height: 10%;
+  transition: 0.2s ease;
+  z-index: -1;
+  clip-path: polygon(
+      0% 74%, 4% 75%, 8% 76%, 11% 77%, 15% 78%, 20% 78%, 25% 77%, 32% 77%, 37% 75%, 40% 74%, 43% 74%, 46% 73%, 52% 72%, 57% 72%, 65% 74%, 66% 75%, 71% 78%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%
+  );
+  background: #f6fe04;
+}
+
+button:hover::after {
+  clip-path: polygon(
+      0 30%, 9% 34%, 7% 39%, 11% 43%, 13% 33%, 17% 30%, 24% 34%, 25% 35%, 30% 31%, 30% 38%, 39% 33%, 35% 43%, 43% 45%, 55% 46%, 65% 74%, 67% 66%, 81% 57%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%
+  );
+  height: 80%;
+}
+
+button:hover::before {
+  clip-path: polygon(
+      0 30%, 9% 34%, 7% 39%, 11% 43%, 13% 33%, 17% 30%, 24% 34%, 25% 35%, 30% 31%, 30% 38%, 39% 33%, 35% 43%, 43% 45%, 55% 46%, 65% 74%, 67% 66%, 81% 57%, 75% 82%, 81% 86%, 83% 88%, 88% 91%, 90% 94%, 94% 96%, 98% 98%, 100% 100%, 82% 100%, 0 100%
+  );
+  height: 80%;
+}
